@@ -7,19 +7,33 @@ import { DataService } from '../services/data.service';
   templateUrl: './v-player.component.html',
   styleUrls: ['./v-player.component.css']
 })
-export class VPlayerComponent implements OnInit {
+export class VPlayerComponent {
 
-  id:number;
+  id: number;
 
-  songList:object[];
+  songList: object[];
 
-  constructor(public _path:ActivatedRoute, public _data:DataService) {
-    this.id=this._path.snapshot.params.id
+  song: object;
 
-    this.songList=this._data.songList;
-   }
+  constructor(public _path: ActivatedRoute, public _data: DataService) {
 
+  }
   ngOnInit() {
+    this._path.url.subscribe(url =>{
+      // Code to get the new notification data 
+      // and display it
+      this.id = this._path.snapshot.params.id
+
+      this.songList = this._data.songList;
+  
+      for (let song of this.songList) {
+        if (song["id"] == this.id) {
+          this.song = song;
+        }
+  
+      }
+  });
+
   }
 
 }

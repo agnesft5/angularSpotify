@@ -1,19 +1,19 @@
 <!--First navbar mobil-->
 <div class="banner bg-dark d-md-none">
-    <img class="spotifyLogo mt-3 mb-3 ml-5" src="/assets/logo.png" alt="SpotifyLogo">
+    <img class="spotifyLogo mt-3 mb-3 ml-5" routerLink="" src="/assets/logo.png" alt="SpotifyLogo">
 </div>
 
 <!-- Vertical navbar pc -->
 <div class="vertical-nav" id="sidebar">
     <div class="py-4 px-3 mb-4">
         <div class="media d-flex align-items-center">
-            <img src="/assets/logo.png" alt="SpotifyLogo" width="135" style="cursor:pointer">
+            <img src="/assets/logo.png" alt="SpotifyLogo" width="135" style="cursor:pointer" routerLink="">
             <div class="media-body">
             </div>
         </div>
     </div>
 
-    <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-home"></i> Inicio</p>
+    <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories" routerLink=""><i class="fas fa-home"></i> Inicio</p>
     <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-search"></i> Buscador
     </p>
     <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-book"></i> Biblioteca
@@ -32,8 +32,9 @@
     </div>
 </div>
 
-<!--Horitzontal navbar pc-->
+
 <!--Perque ocupi la pagina restant a la vertical navbar-->
+<!--Horitzontal navbar pc-->
 <div class="page-content" id="content">
     <nav class="navbar navbarBackground d-none d-md-block">
         <div class="text-center navbarItems">
@@ -46,6 +47,7 @@
             <span class="text-gray font-weight-bold small text-uppercase m-3 navbarItem">Descubrir</span>
         </div>
     </nav>
+    <!--Song cards-->
     <div class="banner songListBackground">
         <div class="container">
             <h1 class="SLTitle">Recently played</h1>
