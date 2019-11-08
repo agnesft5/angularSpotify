@@ -1,0 +1,104 @@
+<!--First navbar mobil-->
+<div class="banner bg-dark d-md-none">
+    <img class="spotifyLogo mt-3 mb-3 ml-5" src="/assets/logo.png" alt="SpotifyLogo">
+</div>
+
+<!-- Vertical navbar pc -->
+<div class="vertical-nav" id="sidebar">
+    <div class="py-4 px-3 mb-4">
+        <div class="media d-flex align-items-center">
+            <img src="/assets/logo.png" alt="SpotifyLogo" width="135" style="cursor:pointer">
+            <div class="media-body">
+            </div>
+        </div>
+    </div>
+
+    <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-home"></i> Inicio</p>
+    <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-search"></i> Buscador
+    </p>
+    <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-book"></i> Biblioteca
+    </p>
+    <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-star"></i> Favoritos
+    </p>
+
+    <p class="text-gray text-uppercase px-3 medium py-4 mb-0 navbarCategories"><i class="fas fa-plus-square"
+            style="font-size: 2rem;"></i> <span style="vertical-align: .4rem"> Playlist</span></p>
+
+    <div class="nav flex-column mb-0">
+        <li class="nav-item" *ngFor="let song of songList">
+            <span class="text-gray small font-weight-bold ml-3 mt-5 navbarSongs"
+                routerLink="/player/{{song['id']}}">{{song["title"]}}</span>
+        </li>
+    </div>
+</div>
+
+<!--Horitzontal navbar pc-->
+<!--Perque ocupi la pagina restant a la vertical navbar-->
+<div class="page-content" id="content">
+    <nav class="navbar navbarBackground d-none d-md-block">
+        <div class="text-center navbarItems">
+            <span class="text-gray font-weight-bold small text-uppercase m-3 navbarItem">Seleccionados</span>
+            <span class="text-gray font-weight-bold small text-uppercase m-3 navbarItem">Podcasts</span>
+            <span class="text-gray font-weight-bold small text-uppercase m-3 navbarItem">Listas de éxitos</span>
+            <span class="text-gray font-weight-bold small text-uppercase m-3 navbarItem">Géneros y estados de
+                ánimo</span>
+            <span class="text-gray font-weight-bold small text-uppercase m-3 navbarItem">Novedades</span>
+            <span class="text-gray font-weight-bold small text-uppercase m-3 navbarItem">Descubrir</span>
+        </div>
+    </nav>
+    <div class="banner songListBackground">
+        <div class="container">
+            <h1 class="SLTitle">Recently played</h1>
+            <div class="row songsRow">
+                <div *ngFor="let song of songList" class="col-xs-12 col-md-6 col-lg-4">
+                    <div class="songCard text-center pt-5" routerLink="/player/{{song['id']}}">
+                        <img class="frontSong" src="../../assets/{{song['cover']}}" alt="">
+                        <p class="pt-2 mb-0 text-gray font-weight-bold SCText">{{song["title"]}}</p>
+                        <p class="pt-1 mb-0 text-gray SCText">{{song["autor"]}}</p>
+                        <small class="pt-1 mb-0 text-gray SCText">{{song["album"]}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner songListBackground">
+        <div class="container">
+            <h1 class="SLTitle">Your heavy rotation</h1>
+            <div class="row songsRow">
+                <div *ngFor="let song of songList" class="col-xs-12 col-md-6 col-lg-4">
+                    <div class="songCard text-center pt-5" routerLink="/player/{{song['id']}}">
+                        <img class="frontSong" src="../../assets/{{song['cover']}}" alt="">
+                        <p class="pt-2 mb-0 text-gray font-weight-bold SCText">{{song["title"]}}</p>
+                        <p class="pt-1 mb-0 text-gray SCText">{{song["autor"]}}</p>
+                        <small class="pt-1 mb-0 text-gray SCText">{{song["album"]}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--second horitzontal navbar mobil-->
+<div class="banner bg-dark d-md-none">
+    <nav class="navbar">
+        <div class="container text-center p-0 footerNav ">
+            <div class="row songsRow">
+                <div class="col-3 d-contents p-0 d-flex">
+                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
+                            class="fas fa-home"></i> Inicio</span>
+                </div>
+                <div class="col-3 d-contents p-0 d-flex">
+                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
+                            class="fas fa-search"></i> Buscador</span>
+                </div>
+                <div class="col-3 d-contents p-0 d-flex">
+                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
+                            class="fas fa-book"></i> Biblioteca</span>
+                </div>
+                <div class="col-3 d-contents p-0 d-flex">
+                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
+                            class="fas fa-star"></i> Favoritos</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
