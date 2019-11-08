@@ -50,58 +50,110 @@
     </nav>
 
     <!--Player background-->
-    <div class="banner songListBackground">
+    <div class="banner songListBackground" style="height: 77vh">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="songView text-center">
+                <div class="col-12 col-md-6">
+                    <div class="songView text-center mb-3">
                         <img class="songViewImg" src="../../assets/{{song['cover']}}" alt="">
-                        <div class="mt-3">
-                            <h4 class="text-gray songViewText">{{song["title"]}} </h4>
-                            <h6 class="text-gray songViewText">{{song["autor"]}}</h6>
-                            <p class="text-gray songViewText">{{song["album"]}}</p>
+                        <div class="mt-3 mb-3">
+                            <h3 class="text-gray font-weight-bolder songViewText songViewTitle">{{song["title"]}} </h3>
+                            <h6 class="text-gray small songViewText">{{song["autor"]}}</h6>
                         </div>
                     </div>
+                    <button onclick="document.getElementById('player').play()" type="button"
+                        class="btn btn-success playButton d-none d-md-block">Reproducir</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!--Reproductor-->
-<div class="row rowPlayer">
-    <audio id="player" src="../../assets/{{song['song']}}"></audio>
-    <div style="height: 13.4vh">
-        <icon onclick="document.getElementById('player').play()">Play</icon>
-        <icon onclick="document.getElementById('player').pause()">Pause</icon>
-        <icon onclick="document.getElementById('player').volume += 0.1">Vol +</icon>
-        <icon onclick="document.getElementById('player').volume -= 0.1">Vol -</icon>
+<!--Reproductor pc-->
+<div class="d-none d-md-block">
+    <div class="row rowPlayer">
+        <audio id="player" src="../../assets/{{song['song']}}"></audio>
+        <div class="col-5">
+            <div class="row">
+                <div class="col-5" style="display: contents">
+                    <img class="m-3" style="cursor: pointer" src="../../assets/{{song['cover']}}" width="80vw">
+                </div>
+                <div class="col-7 p-0">
+                    <p class="font-weight-bold medium mb-0 playerSongTitle">{{song["title"]}}</p>
+                    <p class="text-gray small mb-0 playerSongAutor">{{song["autor"]}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').play()" class="m-0 float-right"><i
+                    class="far fa-play-circle text-gray playIcon playerIcon"></i></p>
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').pause()" class="m-0 float-left"><i
+                    class="far fa-pause-circle text-gray pauseIcon playerIcon"></i></p>
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').volume += 0.1" class="m-0 float-right"><i
+                    class="fas fa-plus text-gray plusIcon playerIcon"></i></p>
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').volume -= 0.1" class="m-0 float-left"><i
+                    class="fas fa-minus text-gray minusIcon playerIcon"></i></p>
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+        </div>
+    </div>
+</div>
+<div class="pcPlayerBar">
+    <div class="pcPlayerMove">
     </div>
 </div>
 
+<!--Reproductor mobil-->
+<div class="d-block d-md-none d-lg-none">
+    <div class="row rowPlayer rowPlayerMp">
+        <audio id="player" src="../../assets/{{song['song']}}"></audio>
+        <div class="col-5">
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').play()" class="m-0 float-right"><i
+                    class="far fa-play-circle text-gray playIcon playerIcon"></i></p>
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').pause()" class="m-0 float-left"><i
+                    class="far fa-pause-circle text-gray pauseIcon playerIcon"></i></p>
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').volume += 0.1" class="m-0 float-right"><i
+                    class="fas fa-plus text-gray plusIcon playerIcon"></i></p>
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').volume -= 0.1" class="m-0 float-left"><i
+                    class="fas fa-minus text-gray minusIcon playerIcon"></i></p>
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+        </div>
+    </div>
+</div>
 
 <!--second horitzontal navbar mobil-->
-<div class="banner bg-dark d-md-none">
-    <nav class="navbar">
-        <div class="container text-center p-0 footerNav ">
-            <div class="row songsRow">
-                <div class="col-3 d-contents p-0 d-flex">
-                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
-                            class="fas fa-home"></i> Inicio</span>
-                </div>
-                <div class="col-3 d-contents p-0 d-flex">
-                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
-                            class="fas fa-search"></i> Buscador</span>
-                </div>
-                <div class="col-3 d-contents p-0 d-flex">
-                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
-                            class="fas fa-book"></i> Biblioteca</span>
-                </div>
-                <div class="col-3 d-contents p-0 d-flex">
-                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
-                            class="fas fa-star"></i> Favoritos</span>
-                </div>
-            </div>
+<div class="banner bg-dark d-md-none footerNavBanner">
+    <div class="row footerNav">
+        <div class="col-4 text-center p-0 footerNavCol">
+            <span class="text-gray font-weight-bold small text-uppercase m-0 navbarItem"><i class="fas fa-search"></i>
+                Buscador</span>
         </div>
-    </nav>
+        <div class="col-4 text-center p-0 footerNavCol">
+            <span class="text-gray font-weight-bold small text-uppercase m-0 navbarItem"><i class="fas fa-book"></i>
+                Biblioteca</span>
+        </div>
+        <div class="col-4 text-center p-0 footerNavCol">
+            <span class="text-gray font-weight-bold small text-uppercase m-0 navbarItem"><i class="fas fa-star"></i>
+                Favoritos</span>
+        </div>
+    </div>
 </div>

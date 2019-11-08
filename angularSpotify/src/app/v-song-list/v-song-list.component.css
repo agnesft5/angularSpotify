@@ -72,10 +72,6 @@ body {
 .navbarItems{
     margin: 2% auto !important;   
 }
-.navbarItem{
-    transition: .5s;
-    cursor: pointer;
-}
 .navbarItem:hover{
     color:white;
 }
@@ -86,12 +82,12 @@ body {
     padding-top: 5%;
 }
 .songsRow{
-    width: 75%;
-    margin: 0 auto;
+    width: 95%;
+    text-align: left;
+    margin-left: 1%;
 }
 .frontSong{
     width: 100%;
-    height: 30vh;
     transition: .5s;
 }
 .frontSong:hover{
@@ -106,9 +102,6 @@ body {
 .SCText:hover{
   color: white;
 }
-.footerNav{
-  margin: 0 auto;
-}
 .navbarCategories{
   cursor: pointer;
   transition: .5s;
@@ -122,4 +115,75 @@ body {
 }
 .navbarSongs:hover{
   color: white;
+}
+.rowPlayer{
+  background-color: #444;
+  position: fixed;
+  width: 100%;
+  margin: 0%;
+  bottom: 0;
+  line-height: 7vh;
+}
+.playIcon{
+  font-size: 2.5rem;
+}
+.pauseIcon{
+  font-size: 2.5rem;
+}
+.playerSongTitle{
+  position: absolute;
+  top: 21%;
+  color: white;
+  cursor: pointer;
+  transition: .5s;
+}
+.playerSongAutor{
+  position: absolute;
+  top: 41%;
+  cursor: pointer;
+  transition: .5s;
+}
+.playerSongTitle:hover{
+  text-decoration: underline;
+}
+.playerSongAutor:hover{
+  color:white;
+}
+.playerIcon{
+  cursor: pointer;
+  transition: .5s;
+}
+.playerIcon:hover{
+  color: white;
+}
+.songViewTitle{
+  font-family: 'Montserrat', sans-serif;
+}
+.playButton{
+  border-radius: 1.2rem;
+  width: 15vw;
+  position: relative;
+  left: 30%;
+  margin-top: 3%;
+  margin-bottom: 120%;
+}
+.footerNavCol{
+  line-height: 15vh;
+}
+.footerNavBanner{
+  position: absolute;
+  width: 100%;
+}
+.footerNav{
+  height: 15vh;
+  width: 90%;
+  margin: 0 auto;
+}
+.navbarItem{
+  transition: .5s;
+  cursor: pointer;
+  font-size: .7rem;
+}
+.navbarItem:hover{
+  color:white;
 }

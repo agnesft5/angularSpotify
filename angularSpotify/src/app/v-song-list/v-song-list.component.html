@@ -13,7 +13,8 @@
         </div>
     </div>
 
-    <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories" routerLink=""><i class="fas fa-home"></i> Inicio</p>
+    <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories" routerLink=""><i
+            class="fas fa-home"></i> Inicio</p>
     <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-search"></i> Buscador
     </p>
     <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-book"></i> Biblioteca
@@ -52,7 +53,7 @@
         <div class="container">
             <h1 class="SLTitle">Recently played</h1>
             <div class="row songsRow">
-                <div *ngFor="let song of songList" class="col-xs-12 col-md-6 col-lg-4">
+                <div *ngFor="let song of songList" class="col-4 col-lg-2">
                     <div class="songCard text-center pt-5" routerLink="/player/{{song['id']}}">
                         <img class="frontSong" src="../../assets/{{song['cover']}}" alt="">
                         <p class="pt-2 mb-0 text-gray font-weight-bold SCText">{{song["title"]}}</p>
@@ -67,7 +68,7 @@
         <div class="container">
             <h1 class="SLTitle">Your heavy rotation</h1>
             <div class="row songsRow">
-                <div *ngFor="let song of songList" class="col-xs-12 col-md-6 col-lg-4">
+                <div *ngFor="let song of songList" class="col-4 col-lg-2" style="margin-bottom: 20%">
                     <div class="songCard text-center pt-5" routerLink="/player/{{song['id']}}">
                         <img class="frontSong" src="../../assets/{{song['cover']}}" alt="">
                         <p class="pt-2 mb-0 text-gray font-weight-bold SCText">{{song["title"]}}</p>
@@ -79,28 +80,56 @@
         </div>
     </div>
 </div>
-<!--second horitzontal navbar mobil-->
-<div class="banner bg-dark d-md-none">
-    <nav class="navbar">
-        <div class="container text-center p-0 footerNav ">
-            <div class="row songsRow">
-                <div class="col-3 d-contents p-0 d-flex">
-                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
-                            class="fas fa-home"></i> Inicio</span>
+<div class="d-none d-md-block">
+    <div class="row rowPlayer">
+        <audio id="player" src="../../assets/{{song['song']}}"></audio>
+        <div class="col-5">
+            <div class="row">
+                <div class="col-5" style="display: contents">
+                    <img class="m-3" style="cursor: pointer" src="../../assets/{{song['cover']}}" width="80vw">
                 </div>
-                <div class="col-3 d-contents p-0 d-flex">
-                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
-                            class="fas fa-search"></i> Buscador</span>
-                </div>
-                <div class="col-3 d-contents p-0 d-flex">
-                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
-                            class="fas fa-book"></i> Biblioteca</span>
-                </div>
-                <div class="col-3 d-contents p-0 d-flex">
-                    <span class="text-gray font-weight-bold small text-uppercase m-1 navbarItem"><i
-                            class="fas fa-star"></i> Favoritos</span>
+                <div class="col-7 p-0">
+                    <p class="font-weight-bold medium mb-0 playerSongTitle">{{song["title"]}}</p>
+                    <p class="text-gray small mb-0 playerSongAutor">{{song["autor"]}}</p>
                 </div>
             </div>
         </div>
-    </nav>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').play()" class="m-0 float-right"><i
+                    class="far fa-play-circle text-gray playIcon playerIcon"></i></p>
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').pause()" class="m-0 float-left"><i
+                    class="far fa-pause-circle text-gray pauseIcon playerIcon"></i></p>
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').volume += 0.1" class="m-0 float-right"><i
+                    class="fas fa-plus text-gray plusIcon playerIcon"></i></p>
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+            <p onclick="document.getElementById('player').volume -= 0.1" class="m-0 float-left"><i
+                    class="fas fa-minus text-gray minusIcon playerIcon"></i></p>
+        </div>
+        <div class="col-1 pt-3 mt-3 mb-3">
+        </div>
+    </div>
+</div>
+<!--second horitzontal navbar mobil-->
+<div class="banner bg-dark d-md-none footerNavBanner">
+    <div class="row footerNav">
+        <div class="col-4 text-center p-0 footerNavCol">
+            <span class="text-gray font-weight-bold small text-uppercase m-0 navbarItem"><i class="fas fa-search"></i>
+                Buscador</span>
+        </div>
+        <div class="col-4 text-center p-0 footerNavCol">
+            <span class="text-gray font-weight-bold small text-uppercase m-0 navbarItem"><i class="fas fa-book"></i>
+                Biblioteca</span>
+        </div>
+        <div class="col-4 text-center p-0 footerNavCol">
+            <span class="text-gray font-weight-bold small text-uppercase m-0 navbarItem"><i class="fas fa-star"></i>
+                Favoritos</span>
+        </div>
+    </div>
 </div>
