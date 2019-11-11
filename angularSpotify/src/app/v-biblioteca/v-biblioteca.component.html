@@ -17,7 +17,7 @@
             class="fas fa-home"></i> Inicio</p>
     <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-search"></i> Buscador
     </p>
-    <p routerLink="/biblio" class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-book"></i> Biblioteca
+    <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-book"></i> Biblioteca
     </p>
     <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-star"></i> Favoritos
     </p>
@@ -51,22 +51,7 @@
     <!--Song cards-->
     <div class="banner songListBackground">
         <div class="container">
-            <h1 class="SLTitle">Recently played</h1>
-            <div class="row songsRow">
-                <div *ngFor="let song of songList" class="col-4 col-lg-2">
-                    <div class="songCard text-center pt-5" routerLink="/player/{{song['id']}}">
-                        <img class="frontSong" src="../../assets/{{song['cover']}}" alt="">
-                        <p class="pt-2 mb-0 text-gray font-weight-bold SCText">{{song["title"]}}</p>
-                        <p class="pt-1 mb-0 text-gray SCText">{{song["autor"]}}</p>
-                        <small class="pt-1 mb-0 text-gray SCText">{{song["album"]}}</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="banner songListBackground">
-        <div class="container">
-            <h1 class="SLTitle">Your heavy rotation</h1>
+            <h1 class="SLTitle">All your songs</h1>
             <div class="row songsRow">
                 <div *ngFor="let song of songList" class="col-4 col-lg-2" style="margin-bottom: 20%">
                     <div class="songCard text-center pt-5" routerLink="/player/{{song['id']}}">
@@ -123,7 +108,7 @@
             <span class="text-gray font-weight-bold small text-uppercase m-0 navbarItem"><i class="fas fa-search"></i>
                 Buscador</span>
         </div>
-        <div class="col-4 text-center p-0 footerNavCol" routerLink="/biblio">
+        <div class="col-4 text-center p-0 footerNavCol">
             <span class="text-gray font-weight-bold small text-uppercase m-0 navbarItem"><i class="fas fa-book"></i>
                 Biblioteca</span>
         </div>

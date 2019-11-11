@@ -6,20 +6,23 @@ import { VSongListComponent } from './v-song-list/v-song-list.component';
 import { VPlayerComponent } from './v-player/v-player.component';
 import { DataService } from './services/data.service';
 
-import { RouterModule, Routes } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router';
+import { VBibliotecaComponent } from './v-biblioteca/v-biblioteca.component'
 
 const routerConfig:Routes=[
   {"path":"", "component":VSongListComponent},
   {"path":"songList", "component":VSongListComponent},
   {"path":"player/:id", "component":VPlayerComponent},
-  {"path":"**", "component":VSongListComponent},
+  {"path":"biblio", "component":VBibliotecaComponent},
+  {"path":"**", "component":VSongListComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     VSongListComponent,
-    VPlayerComponent
+    VPlayerComponent,
+    VBibliotecaComponent
   ],
   imports: [
     BrowserModule,

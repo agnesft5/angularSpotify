@@ -17,7 +17,7 @@
             class="fas fa-home"></i> Inicio</p>
     <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-search"></i> Buscador
     </p>
-    <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-book"></i> Biblioteca
+    <p routerLink="/biblio" class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-book"></i> Biblioteca
     </p>
     <p class="text-gray font-weight-bold px-3 medium pb-4 mb-0 navbarCategories"><i class="fas fa-star"></i> Favoritos
     </p>
@@ -106,9 +106,9 @@
         </div>
     </div>
 </div>
-<div class="pcPlayerBar">
-    <div class="pcPlayerMove">
-    </div>
+
+<div class="progress">
+    <span id="progress-amount"></span>
 </div>
 
 <!--Reproductor mobil-->
@@ -148,7 +148,7 @@
                 Buscador</span>
         </div>
         <div class="col-4 text-center p-0 footerNavCol">
-            <span class="text-gray font-weight-bold small text-uppercase m-0 navbarItem"><i class="fas fa-book"></i>
+            <span routerLink="/biblio" class="text-gray font-weight-bold small text-uppercase m-0 navbarItem"><i class="fas fa-book"></i>
                 Biblioteca</span>
         </div>
         <div class="col-4 text-center p-0 footerNavCol">
