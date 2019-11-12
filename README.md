@@ -1,4 +1,4 @@
-# ANGULAR SPOTIFY
+# angularSpotify
 
 ## Description
 
@@ -23,11 +23,11 @@ Para desarrollar este proyecto se ha usado:
 * TypeScript 3
 * Angular 8.3.17
 
-### How to use
+## How to use
 
 Para trabajar en este proyecto hay que hacer un clone del repositorio remoto que podéis encontrar en aquí. Para ello hay que crear una carpeta en local y hacerle un git init. A continuación crear el link git remote add origin "link de nuestro repositorio remoto" y hacer un pull git pull origin master. Una vez hecho el clone, deberéis crear una branch y empezar a trabajar en ella. Ahora ya lo tienes :thumbsup: .
 
-### Future improvements
+## Future improvements
 
 Es de nuestro interés incrementar las funcionalidades de nuestro emulador de Spotify, es por ello que vamos a incorporar algunas mejoras al proyecto:
 
@@ -38,6 +38,6 @@ Es de nuestro interés incrementar las funcionalidades de nuestro emulador de Sp
 * Crear un botón para poder añadir las canciones a un listado de canciones favoritas y crear la vista de estas.
 * Crear un botón para poder crear playlists y crear la vista de cada una de ellas.
 
-### Licéncia
+## Licéncia
 
 GNU GENERAL PUBLIC LICENSE - Version 3, 29 June 2007
