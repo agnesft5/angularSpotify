@@ -6,7 +6,7 @@ El fin de este proyecto es emular la *home page*, el *reproductor* y la *bibliot
 
 ### Features
 
-..* La versión actual del proyecto permite al usuario visualizar una *home page* parecida a la de Spotify en la cuál se muestran las *covers*, títulos y el nombre del álbum a los cuales pertenecen las canciones que hay importadas en el proyecto. Cada canción es un clicable que muestra el *reproductor* de dicha canción. En esta segunda vista se ejecuta el audio con los controles del reproductor. En la *biblioteca* podemos ver todas las canciones del proyecto.
+* La versión actual del proyecto permite al usuario visualizar una *home page* parecida a la de Spotify en la cuál se muestran las *covers*, títulos y el nombre del álbum a los cuales pertenecen las canciones que hay importadas en el proyecto. Cada canción es un clicable que muestra el *reproductor* de dicha canción. En esta segunda vista se ejecuta el audio con los controles del reproductor. En la *biblioteca* podemos ver todas las canciones del proyecto.
 
 
 ### How does it work
@@ -16,12 +16,12 @@ El usuario accede al reproductor de una canción en particular haciendo click en
 ### Stack
 
 Para desarrollar este proyecto se ha usado:
-..* HTML5
-..* CSS3
-..* Bootstrap 4.3.0
-..* ES6
-..* TypeScript 3
-..* Angular 8.3.17
+* HTML5
+* CSS3
+* Bootstrap 4.3.0
+* ES6
+* TypeScript 3
+* Angular 8.3.17
 
 ### How to use
 
@@ -31,12 +31,12 @@ Para trabajar en este proyecto hay que hacer un clone del repositorio remoto que
 
 Es de nuestro interés incrementar las funcionalidades de nuestro emulador de Spotify, es por ello que vamos a incorporar algunas mejoras al proyecto:
 
-..* Añadir datos reales de la verdadera API de Spotify.
-..* Reproducir álbums enteros.
-..* Añadir controles al reproductor (seekbar, botones para cambiar de canción...)
-..* Crear la vista del buscador y su funcionalidad.
-..* Crear un botón para poder añadir las canciones a un listado de canciones favoritas y crear la vista de estas.
-..* Crear un botón para poder crear playlists y crear la vista de cada una de ellas.
+* Añadir datos reales de la verdadera API de Spotify.
+* Reproducir álbums enteros.
+* Añadir controles al reproductor (seekbar, botones para cambiar de canción...)
+* Crear la vista del buscador y su funcionalidad.
+* Crear un botón para poder añadir las canciones a un listado de canciones favoritas y crear la vista de estas.
+* Crear un botón para poder crear playlists y crear la vista de cada una de ellas.
 
 ### Licéncia
 
