@@ -1,13 +1,13 @@
 <!--First navbar mobil-->
 <div class="banner bg-dark d-md-none">
-    <img class="spotifyLogo mt-3 mb-3 ml-5" routerLink="" src="/assets/logo.png" alt="SpotifyLogo">
+    <img class="spotifyLogo mt-3 mb-3 ml-5" routerLink="" src="./assets/logo.png" alt="SpotifyLogo">
 </div>
 
 <!-- Vertical navbar pc -->
 <div class="vertical-nav" id="sidebar">
     <div class="py-4 px-3 mb-4">
         <div class="media d-flex align-items-center">
-            <img src="/assets/logo.png" alt="SpotifyLogo" width="135" style="cursor:pointer" routerLink="">
+            <img src="./assets/logo.png" alt="SpotifyLogo" width="135" style="cursor:pointer" routerLink="">
             <div class="media-body">
             </div>
         </div>
@@ -55,7 +55,7 @@
             <div class="row songsRow">
                 <div *ngFor="let song of songList" class="col-4 col-lg-2">
                     <div class="songCard text-center pt-5" routerLink="/player/{{song['id']}}">
-                        <img class="frontSong" src="../../assets/{{song['cover']}}" alt="">
+                        <img class="frontSong" src="./assets/{{song['cover']}}" alt="">
                         <p class="pt-2 mb-0 text-gray font-weight-bold SCText">{{song["title"]}}</p>
                         <p class="pt-1 mb-0 text-gray SCText">{{song["autor"]}}</p>
                         <small class="pt-1 mb-0 text-gray SCText">{{song["album"]}}</small>
@@ -70,7 +70,7 @@
             <div class="row songsRow">
                 <div *ngFor="let song of songList" class="col-4 col-lg-2" style="margin-bottom: 20%">
                     <div class="songCard text-center pt-5" routerLink="/player/{{song['id']}}">
-                        <img class="frontSong" src="../../assets/{{song['cover']}}" alt="">
+                        <img class="frontSong" src="./assets/{{song['cover']}}" alt="">
                         <p class="pt-2 mb-0 text-gray font-weight-bold SCText">{{song["title"]}}</p>
                         <p class="pt-1 mb-0 text-gray SCText">{{song["autor"]}}</p>
                         <small class="pt-1 mb-0 text-gray SCText">{{song["album"]}}</small>
@@ -82,11 +82,11 @@
 </div>
 <div class="d-none d-md-block">
     <div class="row rowPlayer">
-        <audio id="player" src="../../assets/{{song['song']}}"></audio>
+        <audio id="player" src="./assets/{{song['song']}}"></audio>
         <div class="col-5">
             <div class="row">
                 <div class="col-5" style="display: contents">
-                    <img class="m-3" style="cursor: pointer" src="../../assets/{{song['cover']}}" width="80vw">
+                    <img class="m-3" style="cursor: pointer" src="./assets/{{song['cover']}}" width="80vw">
                 </div>
                 <div class="col-7 p-0">
                     <p class="font-weight-bold medium mb-0 playerSongTitle">{{song["title"]}}</p>

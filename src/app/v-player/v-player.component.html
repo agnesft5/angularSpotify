@@ -1,13 +1,13 @@
 <!--First navbar mobil-->
 <div class="banner bg-dark d-md-none">
-    <img class="spotifyLogo mt-3 mb-3 ml-5" routerLink="" src="/assets/logo.png" alt="SpotifyLogo">
+    <img class="spotifyLogo mt-3 mb-3 ml-5" routerLink="" src="./assets/logo.png" alt="SpotifyLogo">
 </div>
 
 <!-- Vertical navbar pc -->
 <div class="vertical-nav" id="sidebar">
     <div class="py-4 px-3 mb-4">
         <div class="media d-flex align-items-center">
-            <img src="/assets/logo.png" alt="SpotifyLogo" width="135" style="cursor:pointer" routerLink="">
+            <img src="./assets/logo.png" alt="SpotifyLogo" width="135" style="cursor:pointer" routerLink="">
             <div class="media-body">
             </div>
         </div>
@@ -55,7 +55,7 @@
             <div class="row">
                 <div class="col-12 col-md-6">
                     <div class="songView text-center mb-3">
-                        <img class="songViewImg" src="../../assets/{{song['cover']}}" alt="">
+                        <img class="songViewImg" src="./assets/{{song['cover']}}" alt="">
                         <div class="mt-3 mb-3">
                             <h3 class="text-gray font-weight-bolder songViewText songViewTitle">{{song["title"]}} </h3>
                             <h6 class="text-gray small songViewText">{{song["autor"]}}</h6>
@@ -72,11 +72,11 @@
 <!--Reproductor pc-->
 <div class="d-none d-md-block">
     <div class="row rowPlayer">
-        <audio id="player" src="../../assets/{{song['song']}}"></audio>
+        <audio id="player" src="./assets/{{song['song']}}"></audio>
         <div class="col-5">
             <div class="row">
                 <div class="col-5" style="display: contents">
-                    <img class="m-3" style="cursor: pointer" src="../../assets/{{song['cover']}}" width="80vw">
+                    <img class="m-3" style="cursor: pointer" src="./assets/{{song['cover']}}" width="80vw">
                 </div>
                 <div class="col-7 p-0">
                     <p class="font-weight-bold medium mb-0 playerSongTitle">{{song["title"]}}</p>
@@ -114,7 +114,7 @@
 <!--Reproductor mobil-->
 <div class="d-block d-md-none d-lg-none">
     <div class="row rowPlayer rowPlayerMp">
-        <audio id="player" src="../../assets/{{song['song']}}"></audio>
+        <audio id="player" src="./assets/{{song['song']}}"></audio>
         <div class="col-5">
         </div>
         <div class="col-1 pt-3 mt-3 mb-3">
