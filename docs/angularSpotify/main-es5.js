@@ -581,14 +581,21 @@
                             }
                         }
                     });
-                };
-                VPlayerComponent.prototype.ngOnChanges = function () {
                     this.player.addEventListener('timeupdate', function () {
                         var duration = this.player.duration;
                         if (duration > 0) {
                             document.getElementById('progress-amount').style.width = ((this.player.currentTime / duration) * 100) + "%";
                         }
                     });
+                };
+                VPlayerComponent.prototype.ngOnChanges = function () {
+                    //   this.player.addEventListener('timeupdate', function () {
+                    //     var duration = this.player.duration;
+                    //     if (duration > 0) {
+                    //       document.getElementById('progress-amount').style.width = ((this.player.currentTime / duration) * 100) + "%";
+                    //     }
+                    //   });
+                    // }
                 };
                 return VPlayerComponent;
             }());
